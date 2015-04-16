@@ -6,6 +6,14 @@ This an example of express.js-based API.
 
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
+Clone this repository
+
+```sh
+git clone https://github.com/lytvynenko/node-weather
+```
+
+Install dependencies
+
 ```sh
 npm install node-weather --save
 ```
