@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-weather/app/models.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">node-weather/app/models.js</span></h1>
+    <h2>
+        Statements: <span class="metric">100% <small>(55 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">85.71% <small>(24 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(5 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(55 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-weather/app/</a> &#187; models.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var request = require('request');
+var moment = require('moment');
+var utils = require('./utils');
+&nbsp;
+var location = function(location, callback) {
+&nbsp;
+	request('http://maps.googleapis.com/maps/api/geocode/json?address='+location,function(err,res,data){
+		var result = {};
+&nbsp;
+		<span class="missing-if-branch" title="else path not taken" >E</span>if (!err &amp;&amp; res.statusCode== 200){
+			data = JSON.parse(data);
+			for (var i = data.results.length - 1; i &gt; -1; i--) {
+				<span class="missing-if-branch" title="else path not taken" >E</span>if (data.results[i].geometry &amp;&amp; data.results[i].geometry.location) {
+					var coords = {};
+					coords.lat = data.results[i].geometry.location.lat;
+					coords.lng = data.results[i].geometry.location.lng;
+					result.error = false;
+					result.payload = coords;
+					break;
+				}
+			}
+		}
+&nbsp;
+		callback(result.error,result.payload);
+	})
+}
+&nbsp;
+var forecast = function(forecastURL,lat,lng,datetime,options,callback) {
+&nbsp;
+	var result = {};
+	var optionsQuery = utils.forecastParams(options) || <span class="branch-1 cbranch-no" title="branch not covered" >'';</span>
+&nbsp;
+	datetime = datetime || Math.round(new Date().getTime()/1000);
+	var forecastURL = forecastURL+lat+','+lng+(datetime ? ','+datetime:<span class="branch-1 cbranch-no" title="branch not covered" >'')</span>+ optionsQuery
+&nbsp;
+	request(forecastURL,function(err,res,data){
+		if (!err &amp;&amp; res.statusCode== 200){
+			data = JSON.parse(data);
+			result.error = false;
+			result.payload = data;
+		}
+		else
+		{
+			result.error = true;
+			result.payload = "Forecast API request error";
+		}
+&nbsp;
+		callback(result.error,result.payload);
+	})
+}
+&nbsp;
+/**
+ * [parsing the :day parameter]
+ * @param  {[String]} day [date presendation, i.e. 'today','monday','tuesday','01/01/2015', etc.]
+ * @return {[Object]}     ["success":true or false,"payload" - JS timestamp]
+ */
+var day = function(strDay,callback){
+			var result = {};
+			var pattern = new RegExp(/^([^0-9]*)$/); // Regular expression - not any digits here!
+			if (pattern.test(strDay)) {
+				var today = new Date();
+				if (strDay == 'today') {
+					result.error = false;
+					result.payload = today.getTime();
+				}
+				else
+				{
+					var arrDays = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+					if (arrDays.indexOf(strDay)==-1) { 
+						result.error = true;
+						result.payload = "Invalid date"; 
+					}
+					else
+					{	
+						var dayDayOfWeek = arrDays.indexOf(strDay); 
+						var dayAsString = moment().day(dayDayOfWeek) &lt; moment() ? moment().day(dayDayOfWeek).add(7,'days') : moment().day(dayDayOfWeek);
+						result.error = false;
+						result.payload = new Date(dayAsString.toString()).getTime();
+					}
+				}
+			}
+			else
+			{
+				if (moment(strDay).toString()=='Invalid date') {
+					result.error = true;
+					result.payload = "Invalid date"; 
+				}
+				else
+				{
+					result.error = false;
+					result.payload = new Date(moment(strDay)).getTime();
+				}
+			}
+		callback(result.error,result.payload);
+	}
+&nbsp;
+module.exports.location = location;
+module.exports.forecast = forecast;
+module.exports.day = day;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 16 2015 23:02:29 GMT+1000 (AEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

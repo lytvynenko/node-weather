@@ -1,0 +1,10 @@
+doctype html
+html
+	head
+body
+	- function dateFormat(v) {return new Date(v*1000).toString() }
+	h2.summary #{currently.summary}
+	h1.temperature #{currently.temperature}
+	ul.hourly-list
+		each data in hourly.data
+			li #{dateFormat(data.time)}  - #{data.summary}  - #{data.temperature}

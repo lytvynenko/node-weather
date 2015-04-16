@@ -1,0 +1,5 @@
+--reporter spec
+--colors
+--timeout=20000
+--recursive
+--growl

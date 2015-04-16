@@ -1,0 +1,30 @@
+{
+  "name": "node-weather",
+  "version": "1.0.0",
+  "description": "This an example of express.js-based API. ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "mocha test/test.js"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lytvynenko/node-weather.git"
+  },
+  "author": "Alex Lytvynenko",
+  "license": "MIT",
+  "devDependencies": {
+    "object-to-xml": "^1.0.0",
+    "superagent": "^1.2.0",
+    "mocha": "^2.2.4",
+    "chai": "^2.2.0"
+  },
+  "dependencies": {
+    "express": "^4.12.3",
+    "jade": "^1.9.2",
+    "moment": "^2.10.2",
+    "morgan": "^1.5.2",
+    "request": "^2.55.0",
+    "supertest": "^0.15.0"
+  }
+}

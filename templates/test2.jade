@@ -1,0 +1,8 @@
+doctype html
+html
+	head
+body
+	- function dateFormat(v) {return new Date(v*1000).toString() }
+	h1.timezone #{timezone}
+	h1.temperature #{currently.temperature}
+	h2.summary #{currently.summary}
